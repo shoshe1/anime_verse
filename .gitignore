@@ -1,0 +1,65 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Logs
+*.log
+logs/
+*.out
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+
+# Jupyter Notebooks checkpoints (if any)
+.ipynb_checkpoints
+
+# Environment files
+.env
+.env.*
+
+# Airflow-specific
+orchestration/airflow.db
+orchestration/unittests.cfg
+orchestration/*.pid
+orchestration/logs/
+orchestration/dags/__pycache__/
+orchestration/plugins/__pycache__/
+
+# Spark / PySpark checkpoints or staging
+processing/spark-warehouse/
+processing/__pycache__/
+processing/temp/
+processing/.sparkStaging/
+
+# Kafka / Zookeeper data (if persisted)
+streaming/kafka-logs/
+streaming/zookeeper-data/
+
+# MinIO / Iceberg temp
+*.parquet
+*.orc
+*.avro
+
+# Docker
+**/tmp/
+**/data/
+**/volume/
+**/minio-data/
+**/.dockerignore
+**/Dockerfile~
+
+# VSCode / IDEs
+.vscode/
+.idea/
+
+# Python virtualenvs
+venv/
+.venv/
+env/
