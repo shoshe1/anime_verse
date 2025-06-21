@@ -1,0 +1,12 @@
+FROM bitnami/spark:3.4.2
+
+USER root
+
+# Install curl using the Bitnami-provided package manager
+RUN install_packages curl
+
+# Download Iceberg Spark runtime jar
+RUN curl -L -o /opt/bitnami/spark/jars/iceberg-spark-runtime-3.4_2.12-1.4.2.jar \
+  https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.4_2.12/1.4.2/iceberg-spark-runtime-3.4_2.12-1.4.2.jar
+
+USER 1001
