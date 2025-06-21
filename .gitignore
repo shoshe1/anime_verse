@@ -38,7 +38,7 @@ processing/__pycache__/
 processing/temp/
 processing/.sparkStaging/
 
-# Kafka / Zookeeper data (if persisted)
+# Kafka / Zookeeper data
 streaming/kafka-logs/
 streaming/zookeeper-data/
 
