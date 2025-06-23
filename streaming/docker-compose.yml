@@ -1,25 +1,46 @@
+version: '3.8'
 
 services:
   zookeeper:
     image: bitnami/zookeeper:latest
+    container_name: zookeeper
     ports:
       - "2181:2181"
     environment:
-      ALLOW_ANONYMOUS_LOGIN: yes
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    networks:
+      - animeverse-net
 
   kafka:
-    image: bitnami/kafka:latest
-    ports:
-      - "9092:9092"
-    environment:
-      KAFKA_CFG_ZOOKEEPER_CONNECT: zookeeper:2181
-      ALLOW_PLAINTEXT_LISTENER: yes
-      KAFKA_CFG_LISTENERS: PLAINTEXT://:9092
-      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      image: bitnami/kafka:3.4.0-debian-11-r0
+      container_name: kafka
+      ports:
+        - "9092:9092"
+      environment:
+        - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+        - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+        - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+        - ALLOW_PLAINTEXT_LISTENER=yes
+        - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=true
+      depends_on:
+        - zookeeper
+      networks:
+        - animeverse-net
+
+
+  pos-producer:
+    image: python:3.9-slim
+    container_name: pos-producer
+    command: >
+      sh -c "pip install kafka-python &&
+             python /app/pos_producer.py"
+    volumes:
+      - ./producers:/app
     depends_on:
-      - zookeeper
+      - kafka
+    networks:
+      - animeverse-net
 
 networks:
-  default:
-    name: animeverse-net
+  animeverse-net:
     external: true
