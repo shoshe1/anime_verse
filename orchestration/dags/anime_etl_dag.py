@@ -25,7 +25,7 @@ default_args = {
 with DAG(
     'anime_etl_dag',
     default_args=default_args,
-    description='ETL pipeline: Bronze -> Silver -> Gold',  # <= هنا التغيير
+    description='ETL pipeline: Bronze -> Silver -> Gold', 
     schedule_interval='@daily',
     catchup=False
 ) as dag:
