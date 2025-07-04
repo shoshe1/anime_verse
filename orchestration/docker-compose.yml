@@ -9,6 +9,8 @@ services:
       - postgres-db-volume:/var/lib/postgresql/data
 
   airflow-webserver:
+    build:
+        context: .
     image: apache/airflow:2.8.1
     restart: always
     depends_on:
@@ -16,19 +18,23 @@ services:
     ports:
       - "8080:8080"
     command: >
-      bash -c "airflow db migrate &&
+      bash -c "pip install apache-airflow-providers-docker &&
+              airflow db migrate &&
                airflow users create --username airflow --password airflow --firstname Admin --lastname User --role Admin --email admin@example.com &&
                airflow webserver"
     volumes:
       - ./dags:/opt/airflow/dags
       - ./scripts:/opt/airflow/scripts
-      - ./processing/jobs:/opt/airflow/jobs
+      - /var/run/docker.sock:/var/run/docker.sock 
 
     environment:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__WEBSERVER__SECRET_KEY: b8fdd343af2a69d1b0501072963e253f
 
   airflow-scheduler:
+    build:
+        context: .
     image: apache/airflow:2.8.1
     restart: always
     depends_on:
@@ -38,14 +44,16 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./scripts:/opt/airflow/scripts
-      - ./processing/jobs:/opt/airflow/jobs
+      - /var/run/docker.sock:/var/run/docker.sock 
     environment:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__WEBSERVER__SECRET_KEY: b8fdd343af2a69d1b0501072963e253f
 
 volumes:
   postgres-db-volume:
 
 networks:
   default:
+    external: true
     name: animeverse-net

@@ -3,7 +3,7 @@ from pyspark.sql.functions import from_json, col
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType
 
 spark = SparkSession.builder \
-    .appName("POS Bronze Stream") \
+    .appName("Supplier Bronze Stream") \
     .config("spark.sql.catalog.my_catalog", "org.apache.iceberg.spark.SparkCatalog") \
     .config("spark.sql.catalog.my_catalog.type", "hadoop")\
     .config("spark.sql.catalog.my_catalog.warehouse", "s3a://warehouse/") \
@@ -16,21 +16,20 @@ spark = SparkSession.builder \
 
 # Define schema
 schema = StructType([
-    StructField("transaction_id", StringType()),
+    StructField("delivery_id", StringType()),
     StructField("event_ts", StringType()),
     StructField("ingestion_ts", StringType()),
-    StructField("customer_id", StringType()),
-    StructField("store_id", StringType()),
+    StructField("supplier_id", StringType()),
     StructField("product_id", StringType()),
-    StructField("quantity_purchased", IntegerType()),
-    StructField("unit_price_at_sale", FloatType())
+    StructField("quantity_delivered", IntegerType()),
+    StructField("unit_cost", FloatType())
 ])
 
 # Read from Kafka
 df = spark.readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "kafka:9092") \
-    .option("subscribe", "POS_topic") \
+    .option("subscribe", "supllier_topic") \
     .option("failOnDataLoss", "false") \
     .load()
 
@@ -45,13 +44,13 @@ json_df = df.selectExpr("CAST(value AS STRING)") \
 json_df.writeStream \
     .format("iceberg") \
     .outputMode("append") \
-    .option("checkpointLocation", "s3a://warehouse/bronze/checkpoints/pos_stream") \
-    .toTable("my_catalog.bronze.bronze_pos_transaction_events")
+    .option("checkpointLocation", "s3a://warehouse/bronze/checkpoints/supplier_stream") \
+    .toTable("my_catalog.bronze.bronze_supplier_delivery_events")
 # Start the stream and keep it running
 query = json_df.writeStream \
     .format("iceberg") \
     .outputMode("append") \
-    .option("checkpointLocation", "s3a://warehouse/bronze/checkpoints/pos_stream") \
-    .toTable("my_catalog.bronze.bronze_pos_transaction_events")
+    .option("checkpointLocation", "s3a://warehouse/bronze/checkpoints/supplier_stream") \
+    .toTable("my_catalog.bronze.bronze_supplier_delivery_events")
 
 query.awaitTermination()

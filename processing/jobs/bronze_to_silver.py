@@ -30,7 +30,6 @@ pos_clean = pos_df.join(linked_product_map, on="product_id", how="left") \
         col("transaction_id"),
         col("event_ts").alias("transaction_ts"),
         col("customer_id"),
-        col("store_id"),
         col("product_id"),
         col("quantity_purchased"),
         col("unit_price_at_sale"),
@@ -52,7 +51,7 @@ bookings_clean = bookings_df.join(linked_screening_map, on="screening_id", how="
         col("customer_id"),
         col("screening_id"),
         col("ticket_quantity"),
-        col("ticket_unit_price"),
+        col("unit_price_at_sale").alias("ticket_unit_price"),
         col("anime_id").alias("linked_anime_id")
     ).dropna(subset=["booking_id", "screening_id"])
 
@@ -82,7 +81,6 @@ customer_clean = customer_df.select(
     col("customer_id"),
     col("name"),
     col("email"),
-    col("preferred_genre"),
     col("event_ts").alias("registration_ts")
 ).dropna(subset=["customer_id"])
 

@@ -14,6 +14,7 @@ services:
     volumes:
       - minio-data:/data
       - ./jobs:/opt/bitnami/spark/jobs
+      - ./batch_data:/opt/bitnami/spark/batch_data
     networks:
       - animeverse-net
 
@@ -31,6 +32,7 @@ services:
     volumes:
       - minio-data:/data
       - ./jobs:/opt/bitnami/spark/jobs
+      - ./batch_data:/opt/bitnami/spark/batch_data
     networks:
       - animeverse-net
 
