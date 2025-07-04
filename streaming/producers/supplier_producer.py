@@ -3,16 +3,16 @@ import json
 from kafka import KafkaProducer
 from kafka.errors import NoBrokersAvailable
 import time
-
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # e.g. /app/producers
-CSV_FILE = os.path.join(BASE_DIR, '..', 'mock_data', 'pos_transactions.csv')
+CSV_FILE = os.path.join(BASE_DIR, '..', 'mock_data', 'supplier_deliveries.csv')
 
+    # your processing here
 
 # Configuration
 KAFKA_SERVERS = ['localhost:9092']
-TOPIC = 'POS_topic'
+TOPIC = 'supllier_topic'
 
 # Create producer
 while True:
@@ -31,20 +31,19 @@ with open(CSV_FILE, 'r') as file:
     
     for row in reader:
         # Convert numeric columns
-        if row['quantity_purchased']:
-            row['quantity_purchased'] = int(row['quantity_purchased'])
-      
-        if row['unit_price_at_sale']:
-            row['unit_price_at_sale'] = float(row['unit_price_at_sale'])
+        if row['quantity_delivered']:
+            row['quantity_delivered'] = int(row['quantity_delivered'])
+    
+        if row['unit_cost']:
+            row['unit_cost'] = float(row['unit_cost'])
         
         # Send each row as a message
         producer.send(TOPIC, row)
-        print(f"Sent: {row['transaction_id']}")
+        print(f"Sent: {row['delivery_id']}")
         time.sleep(1)
 
 # Wait for all messages to be sent
 producer.flush()
-
 producer.close()
 
 print("Done!")
