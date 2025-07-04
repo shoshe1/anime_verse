@@ -30,7 +30,8 @@ schema = StructType([
 df = spark.readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "kafka:9092") \
-    .option("subscribe", "pos-transactions") \
+    .option("subscribe", "POS_topic") \
+    .option("failOnDataLoss", "false") \
     .load()
 
 # Parse JSON
