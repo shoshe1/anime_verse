@@ -35,6 +35,47 @@ services:
              python /app/pos_producer.py"
     volumes:
       - ./producers:/app
+      - ./mock_data:/mock_data 
+    depends_on:
+      - kafka
+    networks:
+      - animeverse-net
+
+  concession-producer:
+      image: python:3.9-slim
+      container_name: concession-producer
+      command: >
+        sh -c "pip install kafka-python &&
+              python /app/concession_producer.py"
+      volumes:
+        - ./producers:/app
+        - ./mock_data:/mock_data 
+      depends_on:
+        - kafka
+      networks:
+        - animeverse-net
+  supplier-producer:
+      image: python:3.9-slim
+      container_name: supplier-producer
+      command: >
+        sh -c "pip install kafka-python &&
+              python /app/supplier_producer.py"
+      volumes:
+        - ./producers:/app
+        - ./mock_data:/mock_data 
+      depends_on:
+        - kafka
+      networks:
+        - animeverse-net
+  ticket-producer:
+    image: python:3.9-slim
+    container_name: ticket-producer
+    command: >
+      sh -c "pip install kafka-python &&
+          python /app/ticket_producer.py"
+    volumes:
+      - ./producers:/app
+      - ./mock_data:/mock_data 
     depends_on:
       - kafka
     networks:
