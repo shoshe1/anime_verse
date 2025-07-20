@@ -1,101 +1,51 @@
-transaction_id,event_ts,ingestion_ts,customer_id,product_id,quantity_purchased,unit_price_at_sale,anime_title
-6bb8db31-8b2b-423a-b641-f95ac57a46bc,2025-05-28 17:24:06,2025-05-28 17:25:02,C072,SpiritedAway_Manga_025,1,39.32,SpiritedAway
-e0ab7913-f949-43ee-b314-fdf1eaee4f83,2025-05-28 18:07:29,2025-05-28 18:12:23,C055,FullmetalAlch_TShirt_017,5,32.61,FullmetalAlch
-0cd74662-7f0f-4f93-b965-13af81dc046b,2025-05-28 18:25:11,2025-05-28 18:29:57,C085,AttackTitan_Plushie_002,1,13.12,AttackTitan
-077aeae4-0c76-4d9d-9c99-9331f1e8b701,2025-05-28 21:45:01,2025-05-28 21:47:40,C045,SpyFamily_Stickers_068,2,44.14,SpyFamily
-26ac6244-51a7-41b2-8e7b-e7a6beb6568b,2025-05-28 22:24:12,2025-05-28 22:29:02,C009,Bleach_Keychain_048,1,9.13,Bleach
-d2a4ec8e-1cc5-4e2b-8fe9-dace63d48af1,2025-05-28 23:16:48,2025-05-28 23:21:20,C054,DeathNote_Plushie_016,3,12.08,DeathNote
-caab7df0-2c26-4e2d-900b-300a884551bb,2025-05-29 01:24:14,2025-05-29 01:26:54,C100,YourLieApril_Manga_053,5,8.82,YourLieApril
-a8b799a9-2b05-41c4-9292-78c1114e04bb,2025-05-29 01:40:57,2025-05-29 01:41:24,C097,JujutsuKaisen_Bag_011,1,35.33,JujutsuKaisen
-1a3640e6-4925-4f7d-a18b-b3e2b1f2c9a1,2025-05-29 02:25:06,2025-05-29 02:27:26,C055,Akira_Plushie_032,5,24.89,Akira
-3601ceaf-197c-4063-8441-d8885af96b30,2025-05-29 03:11:55,2025-05-29 03:14:15,C066,DeathNote_Plushie_016,3,24.35,DeathNote
-792ba637-ba8f-43e8-bfed-ca247d1029a7,2025-05-29 03:37:23,2025-05-29 03:39:49,C076,VioletEver_Mug_049,5,35.02,VioletEver
-6dd11d9a-154f-441f-88cc-920ab9ce2fab,2025-05-29 03:56:07,2025-05-29 03:56:31,C077,DeathNote_Plushie_016,1,14.2,DeathNote
-68726280-8659-41b3-a0a3-bf8bdfcbaf96,2025-05-29 04:59:17,2025-05-29 05:01:06,C098,CodeGeass_Artbook_056,3,19.77,CodeGeass
-4c65bce0-9cf1-4b50-a7bf-6cc78b6576ff,2025-05-29 06:38:09,2025-05-29 06:38:13,C056,CowboyBebop_Keychain_036,2,22.11,CowboyBebop
-7ffe8a64-dcc2-4621-8ee3-2663091ef456,2025-05-29 07:30:34,2025-05-29 07:32:32,C086,CowboyBebop_Keychain_036,1,22.87,CowboyBebop
-c9b61d8f-f3c2-4d58-a4e2-c88798b2ac09,2025-05-29 07:43:03,2025-05-29 07:43:25,C059,Akira_Plushie_032,3,30.91,Akira
-6a4e3296-7c22-4a21-8e7d-3487db5962e1,2025-05-29 08:22:10,2025-05-29 08:27:04,C082,YourName_Poster_029,3,10.18,YourName
-bb7169a9-e75d-4d54-a983-23849b159411,2025-05-29 11:11:44,2025-05-29 11:11:55,C022,WeatheringYou_Keychain_071,4,42.44,WeatheringYou
-8a17ac06-d07a-49c7-bc3f-9b079a736fcd,2025-05-29 12:26:43,2025-05-29 12:29:49,C014,OnePiece_Figure_007,4,31.5,OnePiece
-806929e6-0595-49a6-847b-e9b6360f88b4,2025-05-29 13:21:32,2025-05-29 13:26:01,C040,MyHeroAcad_Poster_006,2,19.99,MyHeroAcad
-36684c28-873c-4b0e-956b-3445207e487d,2025-05-29 13:24:53,2025-05-29 13:26:20,C082,MyHeroAcad_Poster_006,5,27.95,MyHeroAcad
-c1a036bd-5d86-4d9f-b573-c2fddcf5503c,2025-05-29 14:54:52,2025-05-29 14:57:51,C083,SpiritedAway_Manga_025,2,9.63,SpiritedAway
-2a7e4ce2-8f0d-4bf8-b410-96094afceb51,2025-05-29 15:00:05,2025-05-29 15:02:17,C078,DeathNote_Mug_015,1,12.97,DeathNote
-22734299-97c7-4cb4-9ebb-4ae88e3563d3,2025-05-29 15:11:25,2025-05-29 15:15:38,C073,Mononoke_Keychain_034,4,35.65,Mononoke
-6d2cc4e7-500f-4010-bd7e-eaee916178f3,2025-05-29 16:04:25,2025-05-29 16:09:15,C080,OnePunchMan_Poster_046,3,11.79,OnePunchMan
-46540c14-3ed2-4767-b0a9-c8bfc5b4d2af,2025-05-29 16:35:43,2025-05-29 16:36:18,C081,Mononoke_Keychain_034,3,31.61,Mononoke
-e4af0da3-19f5-4baf-b510-5259a1a202f4,2025-05-29 18:30:47,2025-05-29 18:33:48,C040,CowboyBebop_Plushie_037,4,6.69,CowboyBebop
-24b80f18-9492-46ec-8e6f-7d4a0343ae34,2025-05-29 18:59:41,2025-05-29 19:02:50,C010,BlueExorcist_Mug_061,5,31.73,BlueExorcist
-f6cc947d-a14c-4852-aea6-73e9f60ba983,2025-05-29 19:21:56,2025-05-29 19:25:13,C071,Mononoke_Stickers_033,4,45.91,Mononoke
-964c99e3-beb5-40f8-88c6-29789891d555,2025-05-29 20:07:05,2025-05-29 20:11:58,C042,Bleach_Bag_047,4,27.56,Bleach
-35c0016c-fef0-4922-b3bf-b90a6ef555f6,2025-05-29 20:27:16,2025-05-29 20:27:48,C044,Mononoke_Stickers_033,5,34.08,Mononoke
-70d622f9-e373-4d78-b2f7-fed959c77c32,2025-05-29 20:57:25,2025-05-29 20:57:46,C057,FullmetalAlch_Artbook_018,5,28.52,FullmetalAlch
-583f5db9-af70-46e5-8cac-2e4e9a8d7e1d,2025-05-29 21:11:13,2025-05-29 21:12:35,C037,SpiritedAway_Stickers_026,4,39.85,SpiritedAway
-0cbca472-c444-4637-a6ef-5467e5d265b4,2025-05-29 21:17:50,2025-05-29 21:18:17,C083,CodeGeass_Poster_058,1,19.84,CodeGeass
-975c2c16-a848-4b7f-aaed-deb71aecd6e6,2025-05-29 21:33:31,2025-05-29 21:38:17,C037,VioletEver_Mug_049,5,44.3,VioletEver
-b1f35473-8790-4a88-8ef0-983c5a2ccc72,2025-05-29 22:08:33,2025-05-29 22:11:24,C085,MyHeroAcad_Poster_006,3,18.96,MyHeroAcad
-57945fea-abbd-44fa-8fdb-49349bfab82d,2025-05-29 22:41:23,2025-05-29 22:44:44,C091,JujutsuKaisen_Keychain_010,3,30.15,JujutsuKaisen
-c0585912-59e2-421d-a8cd-acc9d6bfd998,2025-05-30 00:18:55,2025-05-30 00:21:44,C086,SteinsGate_Stickers_059,1,34.07,SteinsGate
-bbeb4688-f7d1-47fc-b70e-ca4a49151e41,2025-05-30 00:31:52,2025-05-30 00:35:29,C003,CowboyBebop_Plushie_037,3,13.11,CowboyBebop
-352793bb-693c-47f2-8ce3-4427ce1b17cc,2025-05-30 01:13:21,2025-05-30 01:15:11,C099,SpiritedAway_Manga_025,2,15.19,SpiritedAway
-3344aea9-d571-4be7-80ad-52cf62abbb27,2025-05-30 01:20:39,2025-05-30 01:21:50,C038,JujutsuKaisen_Bag_011,5,39.69,JujutsuKaisen
-baaa9f32-85a6-4a38-9c62-6bd013d5ffc3,2025-05-30 01:50:48,2025-05-30 01:55:18,C044,DemonSlayer_Keychain_003,2,31.88,DemonSlayer
-14ecb58c-1447-450f-bfe8-85b6d2189e39,2025-05-30 04:40:31,2025-05-30 04:41:50,C089,TokyoGhoul_Bag_012,2,37.45,TokyoGhoul
-53c47bbd-3710-4f29-ad5e-4788ff53198a,2025-05-30 04:59:22,2025-05-30 04:59:45,C087,Akira_Poster_030,4,32.48,Akira
-125e35b7-ca0f-4c75-81d7-9b3fed8755ea,2025-05-30 05:08:53,2025-05-30 05:12:43,C031,FullmetalAlch_TShirt_017,4,45.68,FullmetalAlch
-7242ca07-2d90-4ce4-a128-05593ec38b52,2025-05-30 05:36:50,2025-05-30 05:38:30,C074,YourName_Figure_027,4,39.62,YourName
-8e0b94ff-f42b-455f-a74a-2fc4e730097b,2025-05-30 05:44:00,2025-05-30 05:47:16,C054,CowboyBebop_Keychain_036,2,41.06,CowboyBebop
-5e386779-9fa4-42ee-9d98-cac9df8fe45d,2025-05-30 06:04:28,2025-05-30 06:05:39,C007,FireForce_Plushie_064,3,29.95,FireForce
-21bbb39b-6e78-4010-a68b-1ed9e695c992,2025-05-30 07:34:34,2025-05-30 07:35:27,C067,YourLieApril_Keychain_052,3,8.77,YourLieApril
-e72a8931-31fe-492f-8c1b-150634e25b5a,2025-05-30 07:35:59,2025-05-30 07:37:22,C066,HunterHunter_TShirt_020,4,9.13,HunterHunter
-8c1fa6e4-5cda-4111-bcfb-38462fea85ba,2025-05-30 07:49:54,2025-05-30 07:51:48,C045,SteinsGate_Manga_060,4,7.4,SteinsGate
-82711400-028c-407f-9acf-3978cf5674b0,2025-05-30 08:58:43,2025-05-30 09:03:01,C050,YourName_Figure_027,3,15.1,YourName
-25947586-9472-4dd4-8ed0-657a8395046a,2025-05-30 09:31:34,2025-05-30 09:34:18,C092,SpyFamily_Stickers_068,2,11.19,SpyFamily
-055b09a7-d366-491a-93fe-21953ee70de7,2025-05-30 10:40:51,2025-05-30 10:43:18,C061,ChainsawMan_Stickers_067,4,25.19,ChainsawMan
-76e19fdf-6cc2-4ecd-97ed-21c883af4369,2025-05-30 10:57:43,2025-05-30 10:57:46,C003,ChainsawMan_Stickers_067,2,42.57,ChainsawMan
-954d3e7b-f115-4e46-aaee-f5a5c47bbeb6,2025-05-30 11:30:44,2025-05-30 11:35:25,C078,SpyFamily_Artbook_069,4,10.0,SpyFamily
-a8596bfa-9b54-4661-a9fd-52664d5aba8a,2025-05-30 11:45:33,2025-05-30 11:48:01,C016,FullmetalAlch_TShirt_017,2,23.89,FullmetalAlch
-b8c79d4e-cf5a-4769-b3d7-0233f93b67eb,2025-05-30 11:56:19,2025-05-30 12:00:14,C064,MyHeroAcad_Bag_005,5,5.74,MyHeroAcad
-b49bb6bd-3225-41ef-b895-9c09ba61b292,2025-05-30 12:10:08,2025-05-30 12:14:32,C092,DragonBall_Manga_042,3,24.32,DragonBall
-c8640342-ba98-434b-87a7-1a0d4a88a784,2025-05-30 12:12:50,2025-05-30 12:15:51,C054,FullmetalAlch_Artbook_018,1,28.56,FullmetalAlch
-c345a297-e189-444d-8ea8-c5a4a62a9ba4,2025-05-30 12:27:44,2025-05-30 12:30:49,C068,MyHeroAcad_Bag_005,5,40.39,MyHeroAcad
-fd7b6301-d0ab-46c4-96ae-96b2d8ca26ce,2025-05-30 13:24:15,2025-05-30 13:28:35,C050,DragonBall_Plushie_040,1,33.61,DragonBall
-45d64d88-5817-4528-8ee4-179088e5c82e,2025-05-30 14:20:05,2025-05-30 14:23:17,C003,FullmetalAlch_Artbook_018,1,20.52,FullmetalAlch
-36fd7f10-84f4-4fdc-af0c-d05d1f607cb3,2025-05-30 14:40:17,2025-05-30 14:41:11,C095,CodeGeass_Artbook_056,2,7.0,CodeGeass
-15620178-b255-4b83-9902-faeb101d745b,2025-05-30 15:37:12,2025-05-30 15:41:52,C083,SpiritedAway_Manga_025,4,49.14,SpiritedAway
-7d5e02e5-af92-4e3a-90f0-057252020324,2025-05-30 17:06:04,2025-05-30 17:10:10,C018,OnePunchMan_Poster_046,4,6.66,OnePunchMan
-b49a5697-0cea-4b61-a9c8-8e282bcdc59e,2025-05-30 17:30:17,2025-05-30 17:32:01,C026,DemonSlayer_TShirt_004,3,47.0,DemonSlayer
-989e9d98-8824-4890-91c4-bfac9358f78f,2025-05-30 17:54:29,2025-05-30 17:58:53,C070,YourName_Poster_029,3,6.65,YourName
-18c32a78-57a3-4e17-9ac0-c96be15b1266,2025-05-30 17:58:41,2025-05-30 18:00:19,C100,HunterHunter_Keychain_021,3,17.29,HunterHunter
-2becae4d-4abc-43cf-8b83-203546bb7c11,2025-05-30 18:06:09,2025-05-30 18:09:18,C052,Akira_Plushie_032,4,20.26,Akira
-fe26e91b-3082-4064-8be6-236c94c79434,2025-05-30 18:13:18,2025-05-30 18:14:54,C064,CowboyBebop_Keychain_036,5,17.0,CowboyBebop
-8df90087-7466-476f-af44-bbe54f66d9d0,2025-05-30 18:33:21,2025-05-30 18:34:04,C011,YourLieApril_Manga_053,5,49.78,YourLieApril
-285fb4cb-5669-48b8-95a9-f6ed6bd16aa3,2025-05-30 18:50:10,2025-05-30 18:51:43,C042,Evangelion_Poster_039,1,19.76,Evangelion
-5aa81454-c187-4584-9082-0a732686fef2,2025-05-30 19:49:20,2025-05-30 19:51:52,C078,MobPsycho_Poster_022,2,36.04,MobPsycho
-e4b11fec-8257-4c39-85d9-335d6fcca24d,2025-05-30 21:45:12,2025-05-30 21:48:12,C094,Akira_Plushie_032,5,49.92,Akira
-23f8e3c7-7bc1-446d-bc96-c4a6fd041ee4,2025-05-30 22:26:57,2025-05-30 22:29:18,C008,OnePunchMan_Poster_046,4,21.35,OnePunchMan
-050bbf39-3870-4c52-a117-c273482aa59a,2025-05-30 22:47:18,2025-05-30 22:48:40,C019,SpyFamily_Bag_070,4,6.57,SpyFamily
-bf6757d0-b4f3-44d1-a720-554405daa139,2025-05-30 22:51:00,2025-05-30 22:51:35,C083,FullmetalAlch_TShirt_017,3,22.23,FullmetalAlch
-7d456af9-f3ef-43df-b523-617a882e5236,2025-05-31 01:16:40,2025-05-31 01:21:31,C020,DemonSlayer_Keychain_003,3,21.74,DemonSlayer
-8e255629-d62f-4aae-940d-2fa325bdd603,2025-05-31 02:23:59,2025-05-31 02:24:39,C068,DragonBall_Mug_041,4,19.15,DragonBall
-faa3bd66-23ef-4fd8-9ecb-32cd02d3bf69,2025-05-31 02:35:19,2025-05-31 02:37:42,C015,FullmetalAlch_Artbook_018,2,27.46,FullmetalAlch
-b7b773dc-9d48-477a-941a-4429049f4e2f,2025-05-31 03:01:40,2025-05-31 03:04:59,C016,ChainsawMan_Stickers_067,3,36.68,ChainsawMan
-a13f4bd2-a43e-4064-861e-96f490840c2b,2025-05-31 03:36:03,2025-05-31 03:37:53,C037,WeatheringYou_Mug_073,2,10.52,WeatheringYou
-3adebdc7-498b-4779-92ef-ab4a685a5d4a,2025-05-31 05:00:54,2025-05-31 05:01:32,C092,Mononoke_Stickers_033,1,41.47,Mononoke
-ff6bc65b-ac7a-418c-9f55-1f1e0c580d61,2025-05-31 05:54:11,2025-05-31 05:56:55,C091,Bleach_Keychain_048,5,29.4,Bleach
-3ae47a1d-f9d4-4b39-94b6-db46434eb355,2025-05-31 06:02:07,2025-05-31 06:04:41,C092,BlueExorcist_Artbook_062,3,27.89,BlueExorcist
-327df2c2-1183-437b-b433-c786c9b1dfc5,2025-05-31 07:58:33,2025-05-31 07:59:36,C018,WeatheringYou_TShirt_072,4,6.18,WeatheringYou
-4d6356a5-719b-4ce6-b559-3e75baee2015,2025-05-31 09:35:27,2025-05-31 09:40:11,C060,DragonBall_Mug_041,2,32.54,DragonBall
-594cbc1a-aff6-4a94-9b81-0a8891171d74,2025-05-31 09:38:45,2025-05-31 09:39:30,C051,MyHeroAcad_Bag_005,5,23.49,MyHeroAcad
-22853c0a-c745-49b6-8396-a15146cf4e0c,2025-05-31 10:15:17,2025-05-31 10:18:47,C010,SteinsGate_Manga_060,3,33.91,SteinsGate
-7185ebf0-646e-4eb0-86af-829aa61225b4,2025-05-31 10:34:40,2025-05-31 10:38:31,C067,Mononoke_Keychain_034,2,44.51,Mononoke
-bf80ca96-17ed-425f-8781-55e488400cdb,2025-05-31 11:43:19,2025-05-31 11:48:02,C024,OnePunchMan_Poster_046,4,27.63,OnePunchMan
-a52328d8-6e45-4faa-b4c8-b8cd801337a7,2025-05-31 11:48:42,2025-05-31 11:49:11,C067,BlueExorcist_Mug_061,3,12.41,BlueExorcist
-7d5a07fd-a0ab-4e9d-bb23-f5ae06a939a0,2025-05-31 12:29:15,2025-05-31 12:32:01,C029,SpyFamily_Artbook_069,5,45.27,SpyFamily
-a6dc38bc-1a7f-4cdb-b103-e28124c1a7bd,2025-05-31 14:31:51,2025-05-31 14:32:32,C082,FullmetalAlch_Artbook_018,3,10.63,FullmetalAlch
-ba354be1-c490-459f-b879-8e8aa2937624,2025-05-31 15:04:02,2025-05-31 15:06:38,C012,Naruto_Stickers_044,2,31.63,Naruto
-62b53ca8-a74e-4ddd-b71f-61f1ab25ed5c,2025-05-31 16:01:16,2025-05-31 16:06:14,C085,JujutsuKaisen_Bag_011,5,20.19,JujutsuKaisen
-bf2c6ea3-aa07-4590-bd4a-b5fdbc1010c7,2025-05-31 16:21:55,2025-05-31 16:26:44,C004,DemonSlayer_Keychain_003,1,47.68,DemonSlayer
-47246f28-e21f-45b8-aa67-314d4d7886c7,2025-05-31 16:33:34,2025-05-31 16:38:30,C027,HunterHunter_Plushie_019,4,32.81,HunterHunter
-43d79802-3884-4aa2-93df-d058ada4c284,2025-05-31 16:50:07,2025-05-31 16:50:23,C081,CowboyBebop_Keychain_036,3,33.89,CowboyBebop
+transaction_id,customer_id,product_id,quantity_purchased,unit_price_at_sale
+1001,501,AttackOnTitan_manga_001,2,14.99
+1002,501,AttackOnTitan_cup_002,1,12.99
+1003,502,JujutsuKaisen_hoodie_003,1,34.99
+1004,502,JujutsuKaisen_figure_004,2,49.99
+1005,503,SpyxFamily_manga_005,3,9.99
+1006,503,SpyxFamily_poster_006,1,8.99
+1007,504,DemonSlayer_keychain_007,5,6.99
+1008,504,DemonSlayer_tshirt_008,2,24.99
+1009,505,MyDressUpDarling_figure_009,1,39.99
+1010,505,MyDressUpDarling_poster_010,1,7.99
+1011,506,ChainsawMan_manga_011,2,12.99
+1012,506,ChainsawMan_hoodie_012,1,44.99
+1013,507,BocchitheRock_cd_013,1,19.99
+1014,507,BocchitheRock_poster_014,2,9.99
+1015,508,VinlandSaga_artbook_015,1,29.99
+1016,508,VinlandSaga_manga_016,3,10.99
+1017,509,OshinoKo_keychain_017,5,5.99
+1018,509,OshinoKo_manga_018,2,11.99
+1019,510,Frieren_lightnovel_019,1,13.99
+1020,510,Frieren_poster_020,1,8.99
+1021,511,OnePiece_tshirt_021,1,19.99
+1022,511,OnePiece_mug_022,2,14.99
+1023,512,Naruto_headband_023,3,12.99
+1024,512,Naruto_manga_024,1,9.99
+1025,513,DeathNote_notebook_025,1,14.99
+1026,513,DeathNote_manga_026,2,10.99
+1027,514,FullmetalAlchemist_figure_027,1,54.99
+1028,514,FullmetalAlchemist_poster_028,1,8.99
+1029,515,SteinsGate_manga_029,2,11.99
+1030,515,SteinsGate_tshirt_030,1,22.99
+1031,516,YourLieinApril_sheetmusic_031,1,15.99
+1032,516,YourLieinApril_poster_032,2,7.99
+1033,517,ReZero_figure_033,1,45.99
+1034,517,ReZero_lightnovel_034,1,12.99
+1035,518,MyHeroAcademia_hoodie_035,1,39.99
+1036,518,MyHeroAcademia_manga_036,3,9.99
+1037,519,ThePromisedNeverland_poster_037,1,8.99
+1038,519,ThePromisedNeverland_manga_038,2,10.99
+1039,520,DrStone_sciencekit_039,1,29.99
+1040,520,DrStone_manga_040,2,9.99
+1041,521,KimetsunoYaiba_sword_041,1,59.99
+1042,521,KimetsunoYaiba_tshirt_042,2,19.99
+1043,522,TowerofGod_manga_043,1,10.99
+1044,522,TowerofGod_poster_044,1,7.99
+1045,523,TheGodofHighSchool_hoodie_045,1,34.99
+1046,523,TheGodofHighSchool_manga_046,1,11.99
+1047,524,HunterxHunter_manga_047,4,9.99
+1048,524,HunterxHunter_poster_048,1,8.99
+1049,525,NeonGenesisEvangelion_figure_049,1,64.99
+1050,525,NeonGenesisEvangelion_tshirt_050,2,24.99
