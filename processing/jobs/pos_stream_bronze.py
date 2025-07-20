@@ -20,7 +20,6 @@ schema = StructType([
     StructField("event_ts", StringType()),
     StructField("ingestion_ts", StringType()),
     StructField("customer_id", StringType()),
-    StructField("store_id", StringType()),
     StructField("product_id", StringType()),
     StructField("quantity_purchased", IntegerType()),
     StructField("unit_price_at_sale", FloatType())
@@ -42,11 +41,7 @@ json_df = df.selectExpr("CAST(value AS STRING)") \
     .withColumn("ingestion_ts", col("ingestion_ts").cast("timestamp"))
 
 # Write to Iceberg table
-json_df.writeStream \
-    .format("iceberg") \
-    .outputMode("append") \
-    .option("checkpointLocation", "s3a://warehouse/bronze/checkpoints/pos_stream") \
-    .toTable("my_catalog.bronze.bronze_pos_transaction_events")
+
 # Start the stream and keep it running
 query = json_df.writeStream \
     .format("iceberg") \
@@ -54,4 +49,4 @@ query = json_df.writeStream \
     .option("checkpointLocation", "s3a://warehouse/bronze/checkpoints/pos_stream") \
     .toTable("my_catalog.bronze.bronze_pos_transaction_events")
 
-query.awaitTermination()
+query.awaitTermination(100)
