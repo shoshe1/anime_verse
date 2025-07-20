@@ -16,18 +16,15 @@ spark = SparkSession.builder \
 
 # Define schema
 schema = StructType([
-   StructField("registration_id", StringType(), True),
-        StructField("ingestion_ts", TimestampType(), True),
-        StructField("event_ts", TimestampType(), True),
+         StructField("registration_id", StringType(), True),
         StructField("customer_id", StringType(), True),
         StructField("name", StringType(), True),
         StructField("email", StringType(), True),
         ])
-# Define the Iceberg table name
 full_table_name = "my_catalog.bronze.bronze_customer_registration_events"
 csv_file_path = "batch_data/customer_registrations.csv"
 try:
-        # 2. Read the CSV file into a Spark DataFrame using the provided custom schema
+        
         print(f"Reading CSV from: {csv_file_path} with custom schema")
         df = spark.read \
             .option("header", "true") \
@@ -44,10 +41,9 @@ try:
         df.writeTo(full_table_name) \
         .append() \
         .using("iceberg") \
-        .table(full_table_name) # This line is redundant if full_table_name is already passed to writeTo()
+        .table(full_table_name) 
         print(f"Data successfully appended to Iceberg table: {full_table_name}")
 
-        #  Verify the data by reading from the Iceberg table
         print(f"Reading data back from Iceberg table: {full_table_name}")
         iceberg_df = spark.read.format("iceberg").load(full_table_name)
         iceberg_df.show()
