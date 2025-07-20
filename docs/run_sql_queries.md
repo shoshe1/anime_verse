@@ -7,16 +7,7 @@ To run Spark SQL queries against your Iceberg tables stored in MinIO, follow the
 2. Start an interactive Spark SQL shell inside the `spark-master` container with the required Iceberg and MinIO configurations by running:
 
 ```bash
-docker exec -it spark-master /opt/bitnami/spark/bin/spark-sql \
-  --conf spark.sql.catalog.my_catalog=org.apache.iceberg.spark.SparkCatalog \
-  --conf spark.sql.catalog.my_catalog.type=hadoop \
-  --conf spark.sql.catalog.my_catalog.warehouse=s3a://warehouse \
-  --conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions \
-  --conf spark.hadoop.fs.s3a.endpoint=http://minio:9000 \
-  --conf spark.hadoop.fs.s3a.access.key=minioadmin \
-  --conf spark.hadoop.fs.s3a.secret.key=minioadmin \
-  --conf spark.hadoop.fs.s3a.path.style.access=true \
-  --conf spark.hadoop.fs.s3a.impl=org.apache.hadoop.fs.s3a.S3AFileSystem
+docker exec -it spark-master /opt/bitnami/spark/bin/spark-sql --conf spark.sql.catalog.my_catalog=org.apache.iceberg.spark.SparkCatalog --conf spark.sql.catalog.my_catalog.type=hadoop --conf spark.sql.catalog.my_catalog.warehouse=s3a://warehouse --conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.hadoop.fs.s3a.endpoint=http://minio:9000 --conf spark.hadoop.fs.s3a.access.key=minioadmin --conf spark.hadoop.fs.s3a.secret.key=minioadmin --conf spark.hadoop.fs.s3a.path.style.access=true --conf spark.hadoop.fs.s3a.impl=org.apache.hadoop.fs.s3a.S3AFileSystem
 
 
 ## Sample Spark SQL Queries for Gold Layer Validation
