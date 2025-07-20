@@ -14,14 +14,13 @@ spark = SparkSession.builder \
     .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
     .getOrCreate()
 
-# Define schema
 schema = StructType([
     StructField("booking_id", StringType()),
     StructField("event_ts", StringType()),
     StructField("ingestion_ts", StringType()),
     StructField("customer_id", StringType()),
     StructField("screening_id", StringType()),
-    StructField("ticket_quantity", IntegerType()),
+    StructField("quantity_purchased", IntegerType()),
     StructField("unit_price_at_sale", FloatType())
 ])
 
@@ -41,16 +40,11 @@ json_df = df.selectExpr("CAST(value AS STRING)") \
     .withColumn("ingestion_ts", col("ingestion_ts").cast("timestamp"))
 
 # Write to Iceberg table
-json_df.writeStream \
-    .format("iceberg") \
-    .outputMode("append") \
-    .option("checkpointLocation", "s3a://warehouse/bronze/checkpoints/ticket_stream") \
-    .toTable("my_catalog.bronze.bronze_ticket_booking_events")
-# Start the stream and keep it running
+
 query = json_df.writeStream \
     .format("iceberg") \
     .outputMode("append") \
     .option("checkpointLocation", "s3a://warehouse/bronze/checkpoints/ticket_stream") \
     .toTable("my_catalog.bronze.bronze_ticket_booking_events")
 
-query.awaitTermination()
+query.awaitTermination(100)
