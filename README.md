@@ -5,11 +5,6 @@ This project implements a multi-layer data pipeline for AnimeVerse, a combined a
 
 Key features include Slowly Changing Dimensions (SCD Type 2) handling for evolving dimension tables, late-arriving supplier data integration, and comprehensive data quality checks to ensure reliable insights.
 How to Run
-Prerequisites
-
-    Docker and Docker Compose installed
-
-    Sufficient local machine resources (recommend 8GB+ RAM)
 
 Setup Shared Network
 
