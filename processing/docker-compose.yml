@@ -11,10 +11,12 @@ services:
       - SPARK_SSL_ENABLED=no
     ports:
       - "8081:8080"
+      - "4040:4040"
     volumes:
       - minio-data:/data
       - ./jobs:/opt/bitnami/spark/jobs
       - ./batch_data:/opt/bitnami/spark/batch_data
+      - ./jars:/opt/spark/jars
     networks:
       - animeverse-net
 
@@ -33,6 +35,7 @@ services:
       - minio-data:/data
       - ./jobs:/opt/bitnami/spark/jobs
       - ./batch_data:/opt/bitnami/spark/batch_data
+      - ./jars:/opt/spark/jars
     networks:
       - animeverse-net
 
