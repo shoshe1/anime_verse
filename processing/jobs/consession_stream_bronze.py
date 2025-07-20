@@ -41,16 +41,11 @@ json_df = df.selectExpr("CAST(value AS STRING)") \
     .withColumn("ingestion_ts", col("ingestion_ts").cast("timestamp"))
 
 # Write to Iceberg table
-json_df.writeStream \
-    .format("iceberg") \
-    .outputMode("append") \
-    .option("checkpointLocation", "s3a://warehouse/bronze/checkpoints/concession_stream") \
-    .toTable("my_catalog.bronze.bronze_supplier_delivery_events")
-# Start the stream and keep it running
+
 query = json_df.writeStream \
     .format("iceberg") \
     .outputMode("append") \
     .option("checkpointLocation", "s3a://warehouse/bronze/checkpoints/concession_stream") \
     .toTable("my_catalog.bronze.bronze_concession_purchase_events")
 
-query.awaitTermination()
+query.awaitTermination(100)
